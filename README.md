@@ -6,6 +6,12 @@ O projeto é dividido em duas partes principais:
 1.  **`treinar_modelo.py`**: Um script que constrói, treina e salva o modelo de CNN usando o famoso dataset MNIST.
 2.  **`app.py`**: Uma aplicação web interativa, construída com Gradio, que carrega o modelo treinado e permite que o usuário desenhe um dígito para obter uma previsão em tempo real.
 
+### 🚀 Link da Apresentação (Canva)
+
+Para mais detalhes sobre o projeto, acesse nossa apresentação no Canva:
+
+[Apresentação do Projeto - Reconhecimento de Dígitos (Canva)](https://www.canva.com/design/DAG3wv1yZcQ/_ud0nIhJC1pNM-TG4jjDdQ/edit?utm_content=DAG3wv1yZcQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## 📊 Resultados do Treinamento
 
 O script de treinamento (`treinar_modelo.py`) gera os seguintes gráficos de performance, demonstrando um modelo com alta acurácia e sem *overfitting*:
@@ -75,3 +81,9 @@ O script `app.py` irá iniciar um servidor local e fornecer um link (normalmente
 2.  Clique no botão **"Submit"**.
 3.  O modelo fará a previsão e mostrará os resultados (com as 3 maiores confianças) na caixa "Previsão".
 4.  Use o botão **"Clear"** para limpar o desenho e a previsão.
+
+### 👨‍💻 Integrantes do Grupo
+
+* **Gabriel Bianconi** (RA: 20.00822-8)
+* **Carlos Alberto Matias da Costa** (RA: 20.01308-6)
+* **Bruno Fevereiro** (RA: 20.02194-0)
