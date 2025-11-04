@@ -1,1 +1,77 @@
-# Redes-Neurais_Hello_World
+# 🤖 Reconhecimento de Dígitos MNIST c
+
+Este projeto utiliza uma **Rede Neural**, construída com TensorFlow/Keras, para reconhecer dígitos manuscritos (0-9).
+
+O projeto é dividido em duas partes principais:
+1.  **`treinar_modelo.py`**: Um script que constrói, treina e salva o modelo de CNN usando o famoso dataset MNIST.
+2.  **`app.py`**: Uma aplicação web interativa, construída com Gradio, que carrega o modelo treinado e permite que o usuário desenhe um dígito para obter uma previsão em tempo real.
+
+## 📊 Resultados do Treinamento
+
+O script de treinamento (`treinar_modelo.py`) gera os seguintes gráficos de performance, demonstrando um modelo com alta acurácia e sem *overfitting*:
+
+![Gráficos de Acurácia e Perda do Treinamento]([httpsa://i.imgur.com/g880Fq3.png](https://github.com/GabrielBianconiconi/Redes-Neurais_MNIST/blob/main/graficos_treinamento.png))
+
+
+## 📂 Estrutura do Projeto
+
+```
+/reconhecimento-digitos-mnist
+│
+├── 📜 treinar_modelo.py   # Script para treinar a CNN e salvar o .h5
+├── 🚀 app.py              # Script para rodar a interface web com Gradio
+├── 🧠 modelo_mnist.h5     # (Gerado) O modelo treinado
+├── 📊 graficos_treinamento.png # (Gerado) Gráficos de performance
+└── 📄 README.md           # Este arquivo
+```
+
+## 🛠️ Requisitos
+
+Para rodar este projeto, você precisará das seguintes bibliotecas Python. É altamente recomendado usar um ambiente virtual (`venv`).
+
+* `tensorflow`
+* `gradio`
+* `numpy`
+* `matplotlib`
+* `pillow` (para processamento de imagem no `app.py`)
+
+Você pode instalar todas as dependências com o pip:
+
+```bash
+pip install tensorflow gradio numpy matplotlib pillow
+```
+*(Opcional: Para gerenciar as dependências, você pode criar um arquivo `requirements.txt` com o conteúdo acima e instalar com `pip install -r requirements.txt`)*
+
+## 🚀 Como Usar
+
+O fluxo de trabalho é simples: primeiro, treine o modelo; em seguida, execute a aplicação web.
+
+### Passo 1: Treinar o Modelo
+
+Execute o script `treinar_modelo.py` no seu terminal. Este script irá:
+1.  Baixar o dataset MNIST.
+2.  Construir a arquitetura da CNN.
+3.  Treinar o modelo por 10 épocas.
+4.  Salvar o modelo treinado como `modelo_mnist.h5`.
+5.  Salvar os gráficos de performance como `graficos_treinamento.png`.
+
+```bash
+python treinar_modelo.py
+```
+
+### Passo 2: Executar a Aplicação Web
+
+Após o arquivo `modelo_mnist.h5` ser criado, execute o script `app.py`.
+
+```bash
+python app.py
+```
+
+### Passo 3: Testar no Navegador
+
+O script `app.py` irá iniciar um servidor local e fornecer um link (normalmente `http://127.0.0.1:7860`). Abra este link no seu navegador:
+
+1.  Desenhe um dígito (de 0 a 9) na caixa "Desenhe aqui".
+2.  Clique no botão **"Submit"**.
+3.  O modelo fará a previsão e mostrará os resultados (com as 3 maiores confianças) na caixa "Previsão".
+4.  Use o botão **"Clear"** para limpar o desenho e a previsão.
