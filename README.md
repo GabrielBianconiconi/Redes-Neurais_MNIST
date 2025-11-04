@@ -44,9 +44,8 @@ Para rodar este projeto, você precisará das seguintes bibliotecas Python. É a
 Você pode instalar todas as dependências com o pip:
 
 ```bash
-pip install tensorflow gradio numpy matplotlib pillow
+pip install -r requirements.txt       
 ```
-*(Opcional: Para gerenciar as dependências, você pode criar um arquivo `requirements.txt` com o conteúdo acima e instalar com `pip install -r requirements.txt`)*
 
 ## 🚀 Como Usar
 
